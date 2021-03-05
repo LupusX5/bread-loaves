@@ -1,16 +1,3 @@
-// income rates per 1/10 fraction of a second.
-var muskIncReal = 1978.44/10.00;
-var bezosIncReal = 2447.68/10.00;
-var avgUSwageIncReal = (31133.00/31536000.00)/10.00;
-var avgDEwageIncReal = (((2412.14*12)/0.83)/31536000.00)/10.00;   // (((monthly income * 12 months)*current currency rate)/seconds in 364 days)/1/10 fraction of a second
-var avgRUwageIncReal = (((34184.74*12)/74.80)/31536000.00)/10.00; // (((monthly income * 12 months)*current currency rate)/seconds in 364 days)/1/10 fraction of a second
-var avgTRwageIncReal = (((3177.48*12)/7.44)/31536000.00)/10.00;   // (((monthly income * 12 months)*current currency rate)/seconds in 364 days)/1/10 fraction of a second
-var avgMXwageIncReal = (((10010.25*12)/20.86)/31536000.00)/10.00; // (((monthly income * 12 months)*current currency rate)/seconds in 364 days)/1/10 fraction of a second
-var avgStateDumaDeputyRU = 0.01094436295/10.00;
-var avgSenatorUS = (174000/31536000.00)/10.00; // source: https://www.senate.gov/senators/SenateSalariesSince1789.htm
-var avgSenatorRU = ((28309766.15/74.80)/31536000.00)/10.00;
-var avgSenatorDE = (((10083.47*12)/0.83)/31536000.00)/10.00;  // source: https://www.bundestag.de/en/members/remuneration
-
 var ruble;
 var euro;
 var lira;
