@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize-min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Depression++</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="" class="nav__logo">Depression++</a>
+            <a href="" class="nav__motto">Let's calculate your sadness!</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="targets-list">
+            <div id="targetAdefault" class="targetA">
+                <h3 class="targetA__name">Within <span id="timeCounter">0.0</span> minutes <span id="targetAName"></span> is able to</h3>
+                <ul class="TargetA__options-list">
+                    <li class="targetA__option">buy&nbsp;<span id="teslasCounter" class="target-calculated-area"></span>&nbsp;Tesla Model S cars,</li>
+                    <li class="targetA__option">buy&nbsp;<span id="iPhonesCounter" class="target-calculated-area"></span>&nbsp;iPhones 12 Pro Max,</li>
+                    <li class="targetA__option">earn&nbsp;<span id="wagesCount" class="target-calculated-area"></span>&nbsp;minumum US federal annual wages,</li>
+                    <li class="targetA__option">buy&nbsp;<span  id="loafCounter" class="target-calculated-area"></span>&nbsp;loaves of bread,</li>
+                    <li class="targetA__option">and see&nbsp; <span id="USDCount" class="target-calculated-area"></span><span id="displayIfLocalCountIsTrue"> /</span> <span id="localCount" class="target-calculated-area"></span>&nbsp; <br> appearing on the bank account.</li>
+                </ul>
+            </div>
+            <div id="targetChidden" class="targetC">
+                <h3 class="targetC__name">Within <span id="timeCounter">0.0</span> minutes <span id="targetAName"></span> is able to</h3>
+                <ul class="TargetC__options-list">
+                    <li class="targetC__option">buy&nbsp;<span id="loafCounter" class="target-calculated-area"></span>&nbsp; loaves of bread,</li>
+                    <li class="targetC__option">buy&nbsp;<span id="iPhonesCounter" class="target-calculated-area"></span>&nbsp;iPhones 12 Pro Max,</li>
+                    <li class="targetC__option">earn&nbsp;<span id="wagesCount" class="target-calculated-area"></span>&nbsp;minumum US federal annual wages,</li>
+                    <li class="targetC__option">buy&nbsp;<span style="display: inline-block; width: 60px; max-width: 110px; text-align: center;" id="kgOfGoldCount" class="target-calculated-area"></span>&nbsp;kilograms of gold,</li>
+                    <li class="targetC__option">and see&nbsp; <span id="USDCount" class="target-calculated-area"></span><span id="displayIfLocalCountIsTrue"> /</span> <span id="localCount" class="target-calculated-area"></span>&nbsp; <br> appearing on the bank account.</li>
+                </ul>
+            </div>
+            <div class="targetB" id="caseMyselfChosen">
+                <h3 class="targetB__name">in <span id="timeCounter"></span> minutes <span id="targetAName"></span> is able to</h3>
+                <ul class="TargetB__options-list">
+                    <li class="targetB__option">buy <span class="target-calculated-area"> </span> Tesla cars</li>
+                    <li class="targetB__option">buy <span class="target-calculated-area"> </span> iPhones</li>
+                    <li class="targetB__option">buy <span class="target-calculated-area"> </span> kilograms of gold</li>
+                    <li class="targetB__option">buy <span class="target-calculated-area"> </span> shares of Apple</li>
+                    <li class="targetB__option">and see <span class="target-calculated-area"> </span> coming to the bank account.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="inputs">
+            <div>
+                <form autocomplete="off">
+                    <div class="top-inputs">
+                        <div class="form-input--top-left">
+                            <label class="form-input-title">I want to compare</label>                            
+                            <select id="type" required required="required" onchange="subjects(this.value);">
+                                <option class="option-list__item" value="chooseOne" disabled selected hidden>Choose an option...</option>
+                            <optgroup label="Personalities">
+                                <option class="option-list__item" id="elonMuskOption" value="Elon Musk" selected>Elon Musk</option>
+                                <option class="option-list__item" id="jeffBezosOption" value="Jeff Bezos">Jeff Bezos</option>
+                            </optgroup>
+                            <optgroup label="Nationalities">
+                                <option class="option-list__item" id="avgAmericanCitizen" value="Average US citizen">US citizen</option>
+                                <option class="option-list__item" id="avgRussianCitizen" value="Average Russia citizen">Russia citizen</option>
+                                <option class="option-list__item" id="avgGermanCitizen" value="Average Germany citizen">Germany citizen</option>
+                                <option class="option-list__item" id="avgMexicanCitizen" value="Average Mexico citizen">Mexico citizen</option>
+                                <option class="option-list__item" id="avgTurkishCitizen" value="Average Turkey citizen">Turkey citizen</option>
+                            </optgroup>
+                            <optgroup label="Government">
+                                <option class="option-list__item" id="" value="US senator">US senator</option>
+                                <option class="option-list__item" id="" value="Russia senator">Russian senator</option>
+                                <option class="option-list__item" id="RUDuma" value="Russia state duma deputy">Russian State Duma deputy</option>
+                                <option class="option-list__item" id="" value="Germany senator">German senator (Bundestag Member)</option>                                
+                            </optgroup>
+                            <optgroup label="Miscellaneous">
+                                <option class="option-list__item" id="myselfOption" value="Myself">Myself</option>
+                            </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-input--top-right" id="caseMyself">
+                            <label id="myselfOptionInput" class="form-input-title">I earn per month (USD)</label>
+                            <input oninput="myScript();" id="userTopInput" class="form-input" type="number">
+                            <span id="cheburek"></span>
+                        </div>
+                    </div>
+                    <div class="bottom-inputs">
+                        <div class="form-input--bottom-left">
+                            <span class="form-input-title">and</span>                            
+                            <select id="type" required required="required">
+                                <option value="chooseOne" disabled selected hidden>Choose an option...</option>
+                                <option value="Average US citizen">Average US citizen</option>
+                                <option value="Average German citizen">Average German citizen</option>
+                                <option value="Average Russian citizen">Average Russian citizen</option>
+                                <option value="Elon Musk">Elon Musk</option>
+                                <option value="Jeff Bezos">Jeff Bezos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="submit-button">
+                        <input class="submit-sadness-button" type="submit" name="" id="" value="Compare">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <p id="money"></p>
+
+    <script src="js/app.js"></script>
+    <script src="js/time.js"></script>
+</body>
+</html>
